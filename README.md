@@ -54,7 +54,7 @@ It works just fine if you pass a height and/or width as a style to the `Ellipsis
 ## API
 
 These are the props available in `@moxy/react-ellipsis`. 
-You can also pass callbacks (`onMouseEnter`, `onMouseLeave` and `onClick`, for example) as props, as they will be spread to the component.
+Besides these, additional props are spread to the component. This means you can also pass some useful callbacks (`onMouseEnter`, `onMouseLeave`, `onClick`, etc) if you want.
 
 #### children
 
