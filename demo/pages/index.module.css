@@ -1,5 +1,5 @@
 .home {
-    & .newComponent {
-        border: 1px solid red;
+    & .text {
+        max-height: 100px;
     }
 }

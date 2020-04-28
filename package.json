@@ -1,7 +1,7 @@
 {
-  "name": "@moxy/react-lib-template",
+  "name": "@moxy/react-ellipsis",
   "version": "0.0.0",
-  "description": "A template that aims to make the implementation of React component packages easier and more methodic.",
+  "description": "A wrapper component that adds an Ellipsis to the end of a single or multiline text.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -9,18 +9,18 @@
     "es",
     "dist"
   ],
-  "homepage": "https://github.com/moxystudio/react-lib-template#readme",
+  "homepage": "https://github.com/moxystudio/react-ellipsis#readme",
   "author": "Rui Monteiro <rui.monteiro@moxy.studio>",
   "license": "MIT",
   "keywords": [
-    "template"
+    "ellipsis"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moxystudio/react-lib-template.git"
+    "url": "git+https://github.com/moxystudio/react-ellipsis.git"
   },
   "bugs": {
-    "url": "https://github.com/moxystudio/react-lib-template/issues"
+    "url": "https://github.com/moxystudio/react-ellipsis/issues"
   },
   "scripts": {
     "build:css": "rimraf dist && postcss src/styles/**/*.css --base src/styles --dir dist",

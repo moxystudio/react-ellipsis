@@ -1,58 +1,90 @@
--------
-### ⚠️  PLEASE READ THE [INSTRUCTIONS](/INSTRUCTIONS.md) FOR GUIDELINES ON HOW TO START YOUR PACKAGE.
-> Don't forget to remove this warning while updating this README.
--------
-
-# {package-name}
+# react-ellipsis
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-[npm-url]:https://npmjs.org/package/@moxy/{package-name}
-[downloads-image]:https://img.shields.io/npm/dm/@moxy/{package-name}.svg
-[npm-image]:https://img.shields.io/npm/v/@moxy/{package-name}.svg
-[build-status-url]:https://github.com/moxystudio/{package-name}/actions
-[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/{package-name}/Node%20CI/master
-[codecov-url]:https://codecov.io/gh/moxystudio/{package-name}
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/{package-name}/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/{package-name}
-[david-dm-image]:https://img.shields.io/david/moxystudio/{package-name}.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/{package-name}?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/{package-name}.svg
+[npm-url]:https://npmjs.org/package/@moxy/{react-ellipsis}
+[downloads-image]:https://img.shields.io/npm/dm/@moxy/{react-ellipsis}.svg
+[npm-image]:https://img.shields.io/npm/v/@moxy/{react-ellipsis}.svg
+[build-status-url]:https://github.com/moxystudio/{react-ellipsis}/actions
+[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/{react-ellipsis}/Node%20CI/master
+[codecov-url]:https://codecov.io/gh/moxystudio/{react-ellipsis}
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/{react-ellipsis}/master.svg
+[david-dm-url]:https://david-dm.org/moxystudio/{react-ellipsis}
+[david-dm-image]:https://img.shields.io/david/moxystudio/{react-ellipsis}.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/{react-ellipsis}?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/{react-ellipsis}.svg
 
-{package-description}
+A wrapper component that adds an Ellipsis to the end of a single or multiline text.
 
 ## Installation
 
 ```sh
-$ npm install @moxy/{package-name}
+$ npm install @moxy/{react-ellipsis}
 ```
 
 This library is written in modern JavaScript and is published in both CommonJS and ES module transpiled variants. If you target older browsers please make sure to transpile accordingly.
 
 ## Motivation
 
-{package-motivation}
+Truncating a text and appending an ellipsis (`...`) to the end of it is a very common use case. It's pretty straightforward to implement, by using CSS only, if we're talking single line. However, for multi-line texts, things get a little bit trickier. Even trickier when you don't really know how many lines of text you're going to have, as it all depends on the css properties you will set for the `<div>` your text will be in. This package aims to ease the pain of appending an ellipsis to any text, while also taking care of responsivity.
 
 ## Usage
 
-{package-usage-example}
+In the component where the truncated text is meant to be placed, import the `Ellipsis` component and just send the text as its child, in `string` format. Like so:
+
+```js
+import React from 'react';
+import Ellipsis from '@moxy/react-ellipsis';
+
+import styles from '...';
+
+const Home = () => (
+    <div>
+        <h1>react-ellipsis</h1>
+        <Ellipsis className={ styles.text }>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        </Ellipsis>
+    </div>
+);
+```
+
+It works just fine if you pass a height and/or width as a style to the `Ellipsis`. The text will then appear truncated, with an ellipsis appended at the end.
+
 
 ## API
 
-{package-api-description}
+These are the props available in `@moxy/react-ellipsis`.
 
-#### {package-api-prop-example}
+#### children
 
-Type: `object`
+Type: `string`
 Required: `true`
 
-The `{package-api-prop-example}` has the following shape:
-```js
-{package-api-prop-example}: PropTypes.shape({
-    foo: PropTypes.string,
-    bar: PropTypes.arrayOf(PropTypes.object),
-}).isRequired,
-```
+The string that will be truncated by the `Ellipsis` component.
+
+#### tag
+
+Type: `string`
+
+The tag that will wrap the truncated text Default is `p`.
+
+#### className
+
+Type: `string`
+
+A className to apply to the component.
+
+#### onMouseEnter
+
+Type: `func`
+
+A callback that will be called when the mouse pointer enters the contents of the `Ellipsis` component.
+
+#### onMouseLeave
+
+Type: `func`
+
+A callback that will be called when the mouse pointer leaves the contents of the `Ellipsis` component.
 
 ## Tests
 
@@ -65,7 +97,7 @@ $ npm test -- --watch # during development
 
 A demo [Next.js](https://nextjs.org/) project is available in the [`/demo`](./demo) folder so you can try out this component.
 
-First, build the `{package-name}` project with:
+First, build the `{react-ellipsis}` project with:
 
 ```sh
 $ npm run build
