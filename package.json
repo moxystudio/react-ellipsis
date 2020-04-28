@@ -13,7 +13,8 @@
   "author": "Rui Monteiro <rui.monteiro@moxy.studio>",
   "license": "MIT",
   "keywords": [
-    "ellipsis"
+    "ellipsis",
+    "react"
   ],
   "repository": {
     "type": "git",

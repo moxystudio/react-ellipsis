@@ -2,24 +2,24 @@
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-[npm-url]:https://npmjs.org/package/@moxy/{react-ellipsis}
-[downloads-image]:https://img.shields.io/npm/dm/@moxy/{react-ellipsis}.svg
-[npm-image]:https://img.shields.io/npm/v/@moxy/{react-ellipsis}.svg
-[build-status-url]:https://github.com/moxystudio/{react-ellipsis}/actions
-[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/{react-ellipsis}/Node%20CI/master
-[codecov-url]:https://codecov.io/gh/moxystudio/{react-ellipsis}
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/{react-ellipsis}/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/{react-ellipsis}
-[david-dm-image]:https://img.shields.io/david/moxystudio/{react-ellipsis}.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/{react-ellipsis}?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/{react-ellipsis}.svg
+[npm-url]:https://npmjs.org/package/@moxy/react-ellipsis
+[downloads-image]:https://img.shields.io/npm/dm/@moxy/react-ellipsis.svg
+[npm-image]:https://img.shields.io/npm/v/@moxy/react-ellipsis.svg
+[build-status-url]:https://github.com/moxystudio/react-ellipsis/actions
+[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/react-ellipsis/Node%20CI/master
+[codecov-url]:https://codecov.io/gh/moxystudio/react-ellipsis
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/react-ellipsis/master.svg
+[david-dm-url]:https://david-dm.org/moxystudio/react-ellipsis
+[david-dm-image]:https://img.shields.io/david/moxystudio/react-ellipsis.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/react-ellipsis?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/react-ellipsis.svg
 
 A wrapper component that adds an Ellipsis to the end of a single or multiline text.
 
 ## Installation
 
 ```sh
-$ npm install @moxy/{react-ellipsis}
+$ npm install @moxy/react-ellipsis
 ```
 
 This library is written in modern JavaScript and is published in both CommonJS and ES module transpiled variants. If you target older browsers please make sure to transpile accordingly.
@@ -60,11 +60,12 @@ These are the props available in `@moxy/react-ellipsis`.
 Type: `string`
 Required: `true`
 
-The string that will be truncated by the `Ellipsis` component.
+The string to be truncated by the `Ellipsis` component.
 
 #### tag
 
 Type: `string`
+Default: `p`
 
 The tag that will wrap the truncated text Default is `p`.
 
@@ -97,7 +98,7 @@ $ npm test -- --watch # during development
 
 A demo [Next.js](https://nextjs.org/) project is available in the [`/demo`](./demo) folder so you can try out this component.
 
-First, build the `{react-ellipsis}` project with:
+First, build the `react-ellipsis` project with:
 
 ```sh
 $ npm run build

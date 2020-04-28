@@ -1,7 +1,0 @@
-.container {
-    opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.74, 0.22, 0.99)
-}
-.container.reveal {
-        opacity: 1;
-    }

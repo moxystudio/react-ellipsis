@@ -36,7 +36,7 @@ class Ellipsis extends Component {
         const { children, tag: Tag, className } = this.props;
         const { isPrepared } = this.state;
 
-        const containerClassName = classNames('container', {
+        const containerClassName = classNames('react-ellipsis_container', {
             reveal: isPrepared,
         }, className);
 
