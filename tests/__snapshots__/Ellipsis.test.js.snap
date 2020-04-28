@@ -10,3 +10,14 @@ exports[`Ellipsis Component should render correctly 1`] = `
   </p>
 </DocumentFragment>
 `;
+
+exports[`Ellipsis Component should render correctly when there is a resize 1`] = `
+<DocumentFragment>
+  <p
+    class="className"
+    tag="p"
+  >
+    Testing text, testing text.
+  </p>
+</DocumentFragment>
+`;

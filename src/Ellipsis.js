@@ -66,7 +66,6 @@ class Ellipsis extends Component {
         }
     };
 
-    /* istanbul ignore next */
     handleResize = () => {
         this.ellipsize();
     };
@@ -76,8 +75,6 @@ Ellipsis.propTypes = {
     children: PropTypes.string.isRequired,
     tag: PropTypes.string,
     className: PropTypes.string,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
 };
 
 Ellipsis.defaultProps = {

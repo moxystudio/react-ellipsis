@@ -53,21 +53,22 @@ It works just fine if you pass a height and/or width as a style to the `Ellipsis
 
 ## API
 
-These are the props available in `@moxy/react-ellipsis`.
+These are the props available in `@moxy/react-ellipsis`. 
+You can also pass callbacks (`onMouseEnter`, `onMouseLeave` and `onClick`, for example) as props, as they will be spread to the component.
 
 #### children
 
 Type: `string`
 Required: `true`
 
-The string to be truncated by the `Ellipsis` component.
+A string to be truncated by the `Ellipsis` component.
 
 #### tag
 
 Type: `string`
 Default: `p`
 
-The tag that will wrap the truncated text Default is `p`.
+A HTML tag to wrap the truncated text.
 
 #### className
 
@@ -75,17 +76,6 @@ Type: `string`
 
 A className to apply to the component.
 
-#### onMouseEnter
-
-Type: `func`
-
-A callback that will be called when the mouse pointer enters the contents of the `Ellipsis` component.
-
-#### onMouseLeave
-
-Type: `func`
-
-A callback that will be called when the mouse pointer leaves the contents of the `Ellipsis` component.
 
 ## Tests
 
