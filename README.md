@@ -76,6 +76,12 @@ Type: `string`
 
 A className to apply to the component.
 
+#### throttleWaitTime
+
+Type: `Number`
+Default: `250`
+
+The wait time, in milliseconds, to apply to the internal throttled function that handles window resizing.
 
 ## Tests
 

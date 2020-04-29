@@ -13,7 +13,7 @@ class Ellipsis extends Component {
     constructor(props) {
         super(props);
 
-        this.throttleHandleResize = throttle(this.handleResize, 250);
+        this.throttleHandleResize = throttle(this.handleResize, props.throttleWaitTime);
     }
 
     componentDidMount() {
@@ -33,7 +33,7 @@ class Ellipsis extends Component {
     }
 
     render() {
-        const { children, tag: Tag, className } = this.props;
+        const { children, tag: Tag, className, throttleWaitTime, ...rest } = this.props;
         const { isPrepared } = this.state;
 
         const containerClassName = classNames('react-ellipsis_container', {
@@ -44,7 +44,7 @@ class Ellipsis extends Component {
             <Tag
                 ref={ this.containerRef }
                 className={ containerClassName }
-                { ...this.props }>
+                { ...rest }>
                 { children }
             </Tag>
         );
@@ -75,10 +75,12 @@ Ellipsis.propTypes = {
     children: PropTypes.string.isRequired,
     tag: PropTypes.string,
     className: PropTypes.string,
+    throttleWaitTime: PropTypes.number,
 };
 
 Ellipsis.defaultProps = {
     tag: 'p',
+    throttleWaitTime: 250,
 };
 
 export default Ellipsis;
